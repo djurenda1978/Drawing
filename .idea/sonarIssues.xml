@@ -33,6 +33,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Line.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Point.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/test/TestGeometry.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../Vezba1/src/qh/com/company/Main.java">
           <value>
             <set />
@@ -63,7 +78,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/application-dev.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/application.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/features/MessageDelivery.feature">
           <value>
             <set />
           </value>

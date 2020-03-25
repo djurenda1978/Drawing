@@ -6,6 +6,7 @@ private Point startPoint;
 private Point endPoint;
 private boolean selectedLine;
 
+
     public Point getStartPoint() {
         return startPoint;
     }
@@ -31,8 +32,9 @@ private boolean selectedLine;
     }
 
     public double length() {
-        return startPoint.distance(endPoint);
+        return this.startPoint.distance(this.endPoint);
     }
+
 
 
 

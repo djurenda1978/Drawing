@@ -2,25 +2,10 @@ package drawing.model;
 
 public class Rectagle {
 
-    private Line upperleftX;
-    private Line uperleftY;
     private boolean selectRectangle;
-
-    public Line getUpperleftX() {
-        return upperleftX;
-    }
-
-    public void setUpperleftX(Line upperleftX) {
-        this.upperleftX = upperleftX;
-    }
-
-    public Line getUperleftY() {
-        return uperleftY;
-    }
-
-    public void setUperleftY(Line uperleftY) {
-        this.uperleftY = uperleftY;
-    }
+    private Point upperLeft;
+    private int width;
+    private int height;
 
     public boolean isSelectRectangle() {
         return selectRectangle;
@@ -30,7 +15,31 @@ public class Rectagle {
         this.selectRectangle = selectRectangle;
     }
 
+    public Point getUpperLeft() {
+        return upperLeft;
+    }
+
+    public void setUpperLeft(Point upperLeft) {
+        this.upperLeft = upperLeft;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
     public double area() {
-        return upperleftX.length()*uperleftY.length();
+        return this.width*this.height;
     }
 }

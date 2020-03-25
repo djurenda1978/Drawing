@@ -2,27 +2,36 @@ package drawing.model;
 
 public class Circle {
 
-    private Line radious;
+    private Point center;
+    private int radious;
     private boolean selectCircle;
-    private static double pi = Math.PI;
 
-    public Line getRadious() {
+
+    public Point getCenter() {
+        return center;
+    }
+
+    public void setCenter(Point center) {
+        this.center = center;
+    }
+
+    public int getRadious() {
         return radious;
     }
 
-    public void setRadious(Line radious) {
+    public void setRadious(int radious) {
         this.radious = radious;
     }
 
-    public boolean isSelectCirle() {
+    public boolean isSelectCircle() {
         return selectCircle;
     }
 
-    public void setSelectCirle(boolean selectCirle) {
-        this.selectCircle = selectCirle;
+    public void setSelectCircle(boolean selectCircle) {
+        this.selectCircle = selectCircle;
     }
 
     public double area() {
-        return radious.length()*radious.length()*pi;
+        return this.radious*this.radious*Math.PI;
     }
 }
