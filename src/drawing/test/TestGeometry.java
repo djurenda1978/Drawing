@@ -41,6 +41,8 @@ public class TestGeometry {
         Point p6 = new Point(p3.getX(),p3.getY());
         System.out.println("p6 Promenljiva x:" + p6.getX() + ", p6 Promenljiva y:"+ p6.getY());
 
+        System.out.println("Zadatak 11: Bice unisten Point(30, 40) ");
+
 
     }
 }
