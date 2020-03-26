@@ -7,6 +7,16 @@ public class Rectagle {
     private int width;
     private int height;
 
+    public Rectagle (Point upperLeft, int width, int height) {
+        this.upperLeft = upperLeft;
+        this.width = width;
+        this.height = height;
+    }
+    public Rectagle (Point upperLeft, int width, int height, boolean selectRectangle) {
+        this(upperLeft, width, height);
+        this.selectRectangle = selectRectangle;
+    }
+
     public boolean isSelectRectangle() {
         return selectRectangle;
     }

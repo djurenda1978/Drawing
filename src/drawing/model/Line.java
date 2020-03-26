@@ -6,6 +6,16 @@ private Point startPoint;
 private Point endPoint;
 private boolean selectedLine;
 
+    public Line(Point startPoint, Point endPoint) {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+    }
+
+    public Line(Point startPoint, Point endpoint, boolean selectedLine) {
+        this(startPoint, endpoint);
+        this.selectedLine = selectedLine;
+    }
+
 
     public Point getStartPoint() {
         return startPoint;

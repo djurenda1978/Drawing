@@ -6,6 +6,15 @@ public class Circle {
     private int radious;
     private boolean selectCircle;
 
+    public Circle (Point center, int radious) {
+        this.center = center;
+        this.radious = radious;
+    }
+    public Circle (Point center, int radious, boolean selectCircle) {
+        this(center, radious);
+        this.selectCircle = selectCircle;
+    }
+
 
     public Point getCenter() {
         return center;

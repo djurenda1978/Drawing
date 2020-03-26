@@ -78,6 +78,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/steps/MessageDeliverySteps.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/application-dev.yaml">
           <value>
             <set />
