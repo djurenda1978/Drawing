@@ -15,7 +15,6 @@ public class Circle {
         this.selectCircle = selectCircle;
     }
 
-
     public Point getCenter() {
         return center;
     }
@@ -42,5 +41,13 @@ public class Circle {
 
     public double area() {
         return this.radious*this.radious*Math.PI;
+    }
+    public boolean contains(Point p) {
+
+        return (this.center.distance(p)) <= this.radious;
+    }
+
+    public boolean contains(int x, int y) {
+        return (contains(new Point(x,y)));
     }
 }

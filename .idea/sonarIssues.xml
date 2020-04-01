@@ -73,7 +73,62 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/config/Env.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/request/BaseRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/request/BaseRequestCall.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/request/CallBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/request/Request.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/request/RequestCall.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/response/BaseResponseCall.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/call/response/Response.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/sms/request/SmsBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/requests/Requests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/runner/RunTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/steps/CallChallengeSteps.java">
           <value>
             <set />
           </value>
@@ -83,7 +138,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/steps/NumberInsightSteps.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/steps/OrganisationServiceSteps.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/application-dev.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/application-sit.yaml">
           <value>
             <set />
           </value>
@@ -93,7 +163,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/features/AdvanceNumberInsight.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/features/BasicNumberInsight.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/features/CallChallenge.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/features/MessageDelivery.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/resources/features/OrganisatonService.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service/src/main/resources/application.yml">
           <value>
             <set />
           </value>

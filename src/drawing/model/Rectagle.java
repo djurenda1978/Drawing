@@ -52,4 +52,20 @@ public class Rectagle {
     public double area() {
         return this.width*this.height;
     }
+
+    public boolean contains(Point p) {
+        boolean containsX = p.getX() > this.upperLeft.getX() && p.getX() < this.upperLeft.getX() + this.width;
+        boolean containsY = p.getY() > this.upperLeft.getY() && p.getY() < this.upperLeft.getY() + this.height;
+        return containsX && containsY;
+    }
+
+    public boolean contains(int x, int y) {
+        return (contains(new Point(x,y)));
+    }
+
+    public Point lowerRight() {
+        int upperRightX = getUpperLeft().getX() + width;
+        int lowerLeftY = getUpperLeft().getY() + height;
+        return new Point(upperRightX, lowerLeftY);
+    }
 }
