@@ -7,9 +7,10 @@ public class Point {
     private boolean selected;
 
     public Point(int x, int y) {
-        this.x=x;
-        this.y=y;
+        this.x = x;
+        this.y = y;
     }
+
     public Point(int x, int y, boolean selected) {
         this(x, y);
         this.selected = selected;
@@ -42,7 +43,19 @@ public class Point {
     public double distance(Point p) {
         int dx = this.x - p.x;
         int dy = this.y - p.y;
-        return Math.sqrt (dx*dx+dy*dy);
+        return Math.sqrt(dx * dx + dy * dy);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Point) {
+            Point pTemp = (Point) obj;
+            if (this.x == pTemp.x && this.y == pTemp.y) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
 }

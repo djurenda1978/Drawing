@@ -3,12 +3,32 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/drawing/Main.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/drawing/model/Circle.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/drawing/model/ColoredCircle.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/drawing/model/ColoredCircleWithText.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/drawing/model/Donut.java">
           <value>
             <set />
           </value>
@@ -24,6 +44,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/drawing/model/Rectagle.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/drawing/model/Rectangle.java">
           <value>
             <set />
           </value>
@@ -58,6 +83,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../qa-postman-collections/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../qa-postman-collections/Verification/Sample.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../qa-postman-collections/Verification/Verification-DEV.postman_environment.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../qa-postman-collections/Verification/Verification-NFT.postman_environment.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../qa-postman-collections/Verification/Verification-SIT.postman_environment.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../qa-postman-collections/Verification/Verification_OrganisationService.postman_collection.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-call-service/environments/callsign-sit/values.yaml">
           <value>
             <set />
@@ -73,7 +128,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/.gitlab-ci.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/config/Env.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/config/TestConfig.java">
           <value>
             <set />
           </value>
@@ -113,6 +178,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/insight/response/NetworkProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/organisation/request/OrganisationBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/organisation/request/OrganisationBuilderEmpty.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/organisation/request/OrganisationBuilderEmpty2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/organisation/request/OrganisationBuilderEmptyBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/organisation/request/OrganisationRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/model/sms/request/SmsBuilder.java">
           <value>
             <set />
@@ -144,6 +239,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/steps/OrganisationServiceSteps.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-service-acceptance-tests/src/test/java/com/callsign/verification/utils/ResponseElements.java">
           <value>
             <set />
           </value>
@@ -189,6 +289,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../verification-sms-service/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
           <value>
             <set />
           </value>

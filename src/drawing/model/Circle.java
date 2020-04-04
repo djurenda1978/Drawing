@@ -4,7 +4,7 @@ public class Circle {
 
     private Point center;
     private int radious;
-    private boolean selectCircle;
+    private boolean select;
 
     public Circle (Point center, int radious) {
         this.center = center;
@@ -12,7 +12,7 @@ public class Circle {
     }
     public Circle (Point center, int radious, boolean selectCircle) {
         this(center, radious);
-        this.selectCircle = selectCircle;
+        this.select = selectCircle;
     }
 
     public Point getCenter() {
@@ -31,12 +31,12 @@ public class Circle {
         this.radious = radious;
     }
 
-    public boolean isSelectCircle() {
-        return selectCircle;
+    public boolean isSelect() {
+        return select;
     }
 
-    public void setSelectCircle(boolean selectCircle) {
-        this.selectCircle = selectCircle;
+    public void setSelect(boolean select) {
+        this.select = select;
     }
 
     public double area() {
