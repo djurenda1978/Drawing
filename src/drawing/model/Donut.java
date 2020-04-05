@@ -25,7 +25,7 @@ public class Donut extends Circle {
     public boolean equals (Object obj) {
         if (obj instanceof Donut) {
             Donut dTemp = (Donut)obj;
-            if (super.getCenter() == dTemp.getCenter() && super.getRadious() == dTemp.getRadious() && this.innerRadius == dTemp.innerRadius) {
+            if (super.getCenter().equals(dTemp.getCenter()) && super.getRadious() == dTemp.getRadious() && this.innerRadius == dTemp.innerRadius) {
                 return true;
             } else {
                 return false;

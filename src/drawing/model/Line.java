@@ -49,7 +49,7 @@ public class Line {
 	public boolean equals(Object obj) {
 		if (obj instanceof Line) {
 			Line lTemp = (Line) obj;
-			if (this.startPoint == lTemp.startPoint && this.endPoint == lTemp.endPoint) {
+			if (this.startPoint.equals(lTemp.startPoint) && this.endPoint.equals(lTemp.endPoint)) {
 				return true;
 			} else {
 				return false;
