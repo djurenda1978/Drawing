@@ -1,5 +1,7 @@
 package drawing.model;
 
+import java.util.Objects;
+
 public class Circle {
 
     private Point center;
@@ -49,5 +51,24 @@ public class Circle {
 
     public boolean contains(int x, int y) {
         return (contains(new Point(x,y)));
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if( obj instanceof Circle) {
+            Circle cTemp = (Circle)obj;
+            if (this.center.equals(cTemp.center) && this.radious == cTemp.radious) {
+                return true;
+        } else {
+                return false;
+            }
+
+    }
+        return false;
+    }
+
+    @Override
+    public String toString () {
+        return "Center:" + this.center + ", Radious:" + this.radious ;
     }
 }

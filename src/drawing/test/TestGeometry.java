@@ -59,48 +59,54 @@ public class TestGeometry {
 //        System.out.println("pointY : "   + pointFromInput.getY());
 
 //        vezba: 7
-
+//
         Point startPoint = new Point(3,4,true);
         Point endPoint = new Point(3,4,false);
-        Point middlePoint = new Point(2,7,false);
-        Point center = new Point(4,9,false);
-
+//        Point middlePoint = new Point(2,7,false);
+//        Point center = new Point(4,9,false);
+//
         Line line1 = new Line(startPoint,endPoint,true);
-        Line line2 = new Line(startPoint,endPoint,false);
-        Line line3 = new Line(startPoint,middlePoint,false);
-
+//        Line line2 = new Line(startPoint,endPoint,false);
+//        Line line3 = new Line(startPoint,middlePoint,false);
+//
         Rectangle rectangle1 = new Rectangle(startPoint,3,5);
         Rectangle rectangle2 = new Rectangle(startPoint,3,5);
         Rectangle rectangle3 = new Rectangle(endPoint,3,5);
+//
+//        Donut donut1 = new Donut(center,5, true,3 );
+//        Donut donut2 = new Donut(center,5, false,3 );
+//        Donut donut3 = new Donut(center,8, false,4 );
+//
+//        if (startPoint.equals(endPoint)){
+//            System.out.println("Tacke su iste");
+//        } else {
+//            System.out.println("Tacke nisu iste");
+//        }
+//
+//        if (line1.equals(line3)){
+//            System.out.println("Linije su iste");
+//        } else {
+//            System.out.println("Linije nisu iste");
+//        }
+//
+//        if (rectangle1.equals(rectangle3)){
+//            System.out.println("Pravougaonici su isti");
+//        } else {
+//            System.out.println("Pravougaonici nisu isti");
+//        }
+//
+//        if (donut1.equals(donut3)){
+//            System.out.println("Krofnice su iste");
+//        } else {
+//            System.out.println("Krofnice nisu iste");
+//        }
+//
 
-        Donut donut1 = new Donut(center,5, true,3 );
-        Donut donut2 = new Donut(center,5, false,3 );
-        Donut donut3 = new Donut(center,8, false,4 );
-
-        if (startPoint.equals(endPoint)){
-            System.out.println("Tacke su iste");
-        } else {
-            System.out.println("Tacke nisu iste");
-        }
-
-        if (line1.equals(line3)){
-            System.out.println("Linije su iste");
-        } else {
-            System.out.println("Linije nisu iste");
-        }
-
-        if (rectangle1.equals(rectangle3)){
-            System.out.println("Pravougaonici su isti");
-        } else {
-            System.out.println("Pravougaonici nisu isti");
-        }
-
-        if (donut1.equals(donut3)){
-            System.out.println("Krofnice su iste");
-        } else {
-            System.out.println("Krofnice nisu iste");
-        }
-
+        System.out.println(startPoint);
+        Circle circle = new Circle(new Point(5,10),7);
+        System.out.println(circle);
+        System.out.println(line1);
+        System.out.println(rectangle1);
     }
 }
 

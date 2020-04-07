@@ -21,17 +21,36 @@ public class Donut extends Circle {
         return super.area() - innerRadius*innerRadius*Math.PI;
     }
 
-    @Override
-    public boolean equals (Object obj) {
-        if (obj instanceof Donut) {
-            Donut dTemp = (Donut)obj;
-            if (super.getCenter().equals(dTemp.getCenter()) && super.getRadious() == dTemp.getRadious() && this.innerRadius == dTemp.innerRadius) {
-                return true;
-            } else {
-                return false;
-            }
+//    @Override
+//    public boolean equals (Object obj) {
+//        if (obj instanceof Donut) {
+//            Donut dTemp = (Donut)obj;
+//            if (super.getCenter().equals(dTemp.getCenter()) && super.getRadious() == dTemp.getRadious() && this.innerRadius == dTemp.innerRadius) {
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        }
+//        return false;
+//    }
+//     Drugi nacin
+@Override
+public boolean equals (Object obj) {
+    if (obj instanceof Donut) {
+        Donut dTemp = (Donut) obj;
+        if (super.equals(dTemp) && this.innerRadius == dTemp.innerRadius) {
+            return true;
+        } else {
+            return false;
         }
-        return false;
+    }
+    return false;
+}
+    @Override
+    public String toString() {
+        return super.toString() + ", Inner radious:" + this.innerRadius;
     }
 
 }
+
+

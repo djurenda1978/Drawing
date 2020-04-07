@@ -56,7 +56,11 @@ public class Line {
 			}
 		}
 		return false;
+	}
 
+	@Override
+	public String toString () {
+		return "Start:" + this.startPoint + ", End:" + endPoint;
 	}
 
 
