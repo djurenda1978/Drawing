@@ -43,6 +43,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/drawing/model/Movable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/drawing/model/Point.java">
           <value>
             <set />
@@ -63,7 +68,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/drawing/model/Shape.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/drawing/test/TestGeometry.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/.idea/misc.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Circle.java">
           <value>
             <set />
           </value>
@@ -74,6 +94,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Point.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Polyline.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Polyline2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Drawing_Przulj/src/drawing/model/Rectangle.java">
           <value>
             <set />
           </value>
@@ -89,6 +124,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../mocks-nexmo/src/main/resources/application.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../mocks-number-insight/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../mocks-number-insight/src/main/resources/application.yaml">
           <value>
             <set />
           </value>
@@ -133,7 +178,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../verification-number-service/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../verification-number-service/insight-service/src/main/resources/application.yml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../verification-sms-call-receiver/src/main/java/com/callsign/verification/smscallreceiver/SmsCallReceiverApplication.java">
           <value>
             <set />
           </value>

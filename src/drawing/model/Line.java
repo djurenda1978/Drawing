@@ -1,20 +1,29 @@
 package drawing.model;
 
-public class Line {
+
+import java.awt.*;
+
+public class Line extends Shape implements Movable {
 
 	private Point startPoint;
 	private Point endPoint;
-	private boolean selectedLine;
+//	private boolean selected;
 
 	public Line(Point startPoint, Point endPoint) {
 		this.startPoint = startPoint;
 		this.endPoint = endPoint;
 	}
 
-	public Line(Point startPoint, Point endpoint, boolean selectedLine) {
-		this(startPoint, endpoint);
-		this.selectedLine = selectedLine;
+	public Line(Point startPoint, Point endpoint, boolean selected) {
+		super(selected);
+		this.startPoint = startPoint;
+		this.startPoint = endpoint;
 	}
+
+//	public Line(Point startPoint, Point endpoint, boolean selectedLine) {
+//		this(startPoint, endpoint);
+//		this.selectedLine = selectedLine;
+//	}
 
 
 	public Point getStartPoint() {
@@ -33,17 +42,10 @@ public class Line {
 		this.endPoint = endPoint;
 	}
 
-	public boolean isSelectedLine() {
-		return selectedLine;
-	}
-
-	public void setSelectedLine(boolean selectedLine) {
-		this.selectedLine = selectedLine;
-	}
-
 	public double length() {
 		return this.startPoint.distance(this.endPoint);
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -59,9 +61,29 @@ public class Line {
 	}
 
 	@Override
-	public String toString () {
+	public String toString() {
 		return "Start:" + this.startPoint + ", End:" + endPoint;
 	}
 
+	@Override
+	public boolean contains(int x, int y) {
+		boolean containX = x >= this.startPoint.getX() && x <= this.endPoint.getX();
+		boolean containY = y >= this.startPoint.getY() && y <= this.endPoint.getY();
+		return containX && containY;
+	}
 
+	@Override
+	public void draw(Graphics g) {
+		g.drawLine(this.startPoint.getX(), this.startPoint.getY(), this.endPoint.getX(), this.endPoint.getY());
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+
+		this.startPoint.setX(this.startPoint.getX() +byX);
+		this.startPoint.setY(this.startPoint.getY() +byY);
+		this.endPoint.setX(this.endPoint.getX() +byX);
+		this.endPoint.setY(this.endPoint.getY() +byY);
+
+	}
 }

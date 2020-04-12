@@ -1,6 +1,8 @@
 package drawing.model;
 
-public class Donut extends Circle {
+import java.awt.*;
+
+public class Donut extends Circle implements Movable {
 
     private int innerRadius;
 
@@ -34,6 +36,7 @@ public class Donut extends Circle {
 //        return false;
 //    }
 //     Drugi nacin
+
 @Override
 public boolean equals (Object obj) {
     if (obj instanceof Donut) {
@@ -50,7 +53,23 @@ public boolean equals (Object obj) {
     public String toString() {
         return super.toString() + ", Inner radious:" + this.innerRadius;
     }
+    private boolean containsInner (Point p){
+        return (super.getCenter().distance(p)) < this.innerRadius;
+    }
 
+    public boolean containsInner (int x, int y) {
+        return containsInner (new Point(x,y));
+    }
+
+    public boolean contains(int x, int y) {
+        return (super.contains(x, y) && !containsInner(x,y));
+    }
+
+    @Override
+    public void draw(Graphics g) {
+        super.draw(g);
+        g.drawOval(super.getCenter().getX(), super.getCenter().getY(),this.innerRadius*2, this.innerRadius*2);
+    }
 }
 
 

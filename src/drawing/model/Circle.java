@@ -1,21 +1,28 @@
 package drawing.model;
 
+import java.awt.*;
 import java.util.Objects;
 
-public class Circle {
+public class Circle extends Shape implements Movable{
 
     private Point center;
     private int radious;
-    private boolean select;
+//    private boolean select;
 
     public Circle (Point center, int radious) {
         this.center = center;
         this.radious = radious;
     }
-    public Circle (Point center, int radious, boolean selectCircle) {
-        this(center, radious);
-        this.select = selectCircle;
+
+    public Circle (Point center, int radious,boolean select) {
+        super(select);
+        this.center = center;
+        this.radious = radious;
     }
+//    public Circle (Point center, int radious, boolean selectCircle) {
+//        this(center, radious);
+//        this.select = selectCircle;
+//    }
 
     public Point getCenter() {
         return center;
@@ -33,25 +40,18 @@ public class Circle {
         this.radious = radious;
     }
 
-    public boolean isSelect() {
-        return select;
-    }
-
-    public void setSelect(boolean select) {
-        this.select = select;
-    }
-
     public double area() {
         return this.radious*this.radious*Math.PI;
     }
-    public boolean contains(Point p) {
 
-        return (this.center.distance(p)) <= this.radious;
-    }
 
-    public boolean contains(int x, int y) {
-        return (contains(new Point(x,y)));
-    }
+
+//    public boolean contains(int x, int y) {
+//
+//        return (this.center.distance(new Point(x,y))) <= this.radious;
+//    }
+
+
 
     @Override
     public boolean equals(Object obj) {
@@ -62,7 +62,6 @@ public class Circle {
         } else {
                 return false;
             }
-
     }
         return false;
     }
@@ -70,5 +69,23 @@ public class Circle {
     @Override
     public String toString () {
         return "Center:" + this.center + ", Radious:" + this.radious ;
+    }
+
+    private boolean contains(Point p) {
+        return (this.center.distance(p)) <= this.radious;
+    }
+    public boolean contains(int x, int y) {
+        return contains(new Point(x, y));
+    }
+
+    @Override
+    public void draw(Graphics g) {
+        g.drawOval(this.center.getX(), this.center.getY(),this.radious*2, this.radious*2);
+    }
+
+    @Override
+    public void moveBy(int byX, int byY) {
+        this.center.setX(this.center.getX() + byX);
+        this.center.setY(this.center.getY() + byY);
     }
 }

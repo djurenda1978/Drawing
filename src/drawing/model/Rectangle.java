@@ -1,8 +1,9 @@
 package drawing.model;
 
-public class Rectangle {
+import java.awt.*;
 
-	private boolean selectRectangle;
+public class Rectangle extends Shape implements Movable{
+
 	private Point upperLeft;
 	private int width;
 	private int height;
@@ -12,19 +13,17 @@ public class Rectangle {
 		this.width = width;
 		this.height = height;
 	}
-
-	public Rectangle(Point upperLeft, int width, int height, boolean selectRectangle) {
-		this(upperLeft, width, height);
-		this.selectRectangle = selectRectangle;
+	public Rectangle(Point upperLeft, int width, int height, boolean selected) {
+		super(selected);
+		this.upperLeft = upperLeft;
+		this.width = width;
+		this.height = height;
 	}
 
-	public boolean isSelectRectangle() {
-		return selectRectangle;
-	}
-
-	public void setSelectRectangle(boolean selectRectangle) {
-		this.selectRectangle = selectRectangle;
-	}
+//	public Rectangle(Point upperLeft, int width, int height, boolean selectRectangle) {
+//		this(upperLeft, width, height);
+//		this.selectRectangle = selectRectangle;
+//	}
 
 	public Point getUpperLeft() {
 		return upperLeft;
@@ -54,15 +53,11 @@ public class Rectangle {
 		return this.width * this.height;
 	}
 
-	public boolean contains(Point p) {
-		boolean containsX = p.getX() > this.upperLeft.getX() && p.getX() < this.upperLeft.getX() + this.width;
-		boolean containsY = p.getY() > this.upperLeft.getY() && p.getY() < this.upperLeft.getY() + this.height;
-		return containsX && containsY;
-	}
-
-	public boolean contains(int x, int y) {
-		return (contains(new Point(x, y)));
-	}
+//		public boolean contains(int x, int y) {
+//		boolean containsX = x > this.upperLeft.getX() && x < this.upperLeft.getX() + this.width;
+//		boolean containsY = y > this.upperLeft.getY() && y < this.upperLeft.getY() + this.height;
+//		return containsX && containsY;
+//	}
 
 	public Point lowerRight() {
 		int upperRightX = getUpperLeft().getX() + width;
@@ -87,6 +82,26 @@ public class Rectangle {
 		return "Left upper:" + this.upperLeft + ", Width:" + this.width + ", Height:" + this.height;
 	}
 
+	private boolean contains(Point p) {
+		boolean containsX = p.getX() > this.upperLeft.getX() && p.getX() < this.upperLeft.getX() + this.width;
+		boolean containsY = p.getY() > this.upperLeft.getY() && p.getY() < this.upperLeft.getY() + this.height;
+		return containsX && containsY;
+	}
 
+	public boolean contains(int x, int y) {
+		return contains(new Point(x, y));
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		g.drawRect(upperLeft.getX(), upperLeft.getY(), this.width, this.height);
+
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		this.upperLeft.setX(upperLeft.getX()+ byX);
+		this.upperLeft.setY(upperLeft.getY()+ byY);
+	}
 }
 

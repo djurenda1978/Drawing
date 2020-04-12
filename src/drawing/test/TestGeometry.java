@@ -2,6 +2,8 @@ package drawing.test;
 
 import drawing.model.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
 public class TestGeometry {
@@ -60,18 +62,21 @@ public class TestGeometry {
 
 //        vezba: 7
 //
-        Point startPoint = new Point(3,4,true);
-        Point endPoint = new Point(3,4,false);
+        Point startPoint = new Point(3, 4, true);
+        Point nextPoint = new Point(3, 6, false);
+        Point nextPoint2 = new Point(6, 8, false);
+        Point endPoint = new Point(3, 8, false);
 //        Point middlePoint = new Point(2,7,false);
 //        Point center = new Point(4,9,false);
 //
-        Line line1 = new Line(startPoint,endPoint,true);
-//        Line line2 = new Line(startPoint,endPoint,false);
+        Line line1 = new Line(startPoint, nextPoint, true);
+        Line line2 = new Line(nextPoint, nextPoint2, false);
+        Line line3 = new Line(nextPoint2, endPoint, false);
 //        Line line3 = new Line(startPoint,middlePoint,false);
 //
-        Rectangle rectangle1 = new Rectangle(startPoint,3,5);
-        Rectangle rectangle2 = new Rectangle(startPoint,3,5);
-        Rectangle rectangle3 = new Rectangle(endPoint,3,5);
+        Rectangle rectangle1 = new Rectangle(startPoint, 3, 5);
+        Rectangle rectangle2 = new Rectangle(startPoint, 3, 5);
+        Rectangle rectangle3 = new Rectangle(endPoint, 3, 5);
 //
 //        Donut donut1 = new Donut(center,5, true,3 );
 //        Donut donut2 = new Donut(center,5, false,3 );
@@ -101,12 +106,55 @@ public class TestGeometry {
 //            System.out.println("Krofnice nisu iste");
 //        }
 //
+//        vezba 8
+//
+//        System.out.println(startPoint);
+//        Circle circle = new Circle(new Point(5,10),7);
+//        System.out.println(circle);
+//        System.out.println(line1);
+//        System.out.println(rectangle1);
+//
+//        Polyline polyline = new Polyline ();
+//
+//        polyline.addSegment(line1);
+//
+//       if (!polyline.addSegment(line2)) {
+//           System.out.println("Pocetna linija sledece se ne poklapa sa krajnjom linijom prethodne");
+//       } else {
+//           System.out.println("Linije se poklapaju");
+//        }
+//        if (!polyline.addSegment(line3)) {
+//            System.out.println("Pocetna linija sledece se ne poklapa sa krajnjom linijom prethodne");
+//        } else {
+//            System.out.println("Linije se poklapaju");
+//        }
+//
+//      }
 
-        System.out.println(startPoint);
-        Circle circle = new Circle(new Point(5,10),7);
-        System.out.println(circle);
-        System.out.println(line1);
-        System.out.println(rectangle1);
+        //    vezba 9
+
+        ArrayList<Shape> shapes = new ArrayList<>();
+
+        shapes.add(new Point(100,200));
+        shapes.add(new Line(new Point(100,200), new Point(200,400)));
+        shapes.add(new Circle(new Point(100,200),100));
+        shapes.add(new Rectangle(new Point(100,200),100,200));
+
+        for (Shape shape : shapes) {
+
+           if(shape.contains(100,200)) {
+               System.out.println("Shape sadrzi zadatu tacku");
+           } else {
+               System.out.println("Shape ne sadrzi zadatu tacku");
+           }
+        }
+
+        ArrayList<Movable> movables = new ArrayList<>();
+        movables.addAll((Collection<? extends Movable>) shapes);
+
+        for (Movable movable : movables) {
+            movable.moveBy(20,30);
+        }
     }
 }
 
