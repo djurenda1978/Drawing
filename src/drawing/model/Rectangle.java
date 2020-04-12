@@ -88,6 +88,7 @@ public class Rectangle extends Shape implements Movable{
 		return containsX && containsY;
 	}
 
+	@Override
 	public boolean contains(int x, int y) {
 		return contains(new Point(x, y));
 	}

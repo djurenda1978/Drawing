@@ -61,6 +61,7 @@ public boolean equals (Object obj) {
         return containsInner (new Point(x,y));
     }
 
+    @Override
     public boolean contains(int x, int y) {
         return (super.contains(x, y) && !containsInner(x,y));
     }

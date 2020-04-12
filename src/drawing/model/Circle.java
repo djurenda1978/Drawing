@@ -14,8 +14,8 @@ public class Circle extends Shape implements Movable{
         this.radious = radious;
     }
 
-    public Circle (Point center, int radious,boolean select) {
-        super(select);
+    public Circle (Point center, int radious,boolean selected) {
+        super(selected);
         this.center = center;
         this.radious = radious;
     }
@@ -74,6 +74,7 @@ public class Circle extends Shape implements Movable{
     private boolean contains(Point p) {
         return (this.center.distance(p)) <= this.radious;
     }
+    @Override
     public boolean contains(int x, int y) {
         return contains(new Point(x, y));
     }
