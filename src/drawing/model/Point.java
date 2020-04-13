@@ -75,7 +75,7 @@ public class Point extends Shape implements Movable {
 
     @Override
     public void draw(Graphics g) {
-        g.drawLine(0,0,this.x, this.y);
+        g.drawLine(this.x,this.y,this.x, this.y);
     }
 
     @Override

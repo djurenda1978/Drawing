@@ -6,6 +6,11 @@ public class Donut extends Circle implements Movable {
 
     private int innerRadius;
 
+    public Donut (Point center, int radious, int innerRadius) {
+        super(center, radious);
+        this.innerRadius = innerRadius;
+    }
+
     public Donut(Point center, int radios, boolean select, int innerRadius) {
         super(center, radios, select);
         this.innerRadius = innerRadius;
@@ -15,8 +20,14 @@ public class Donut extends Circle implements Movable {
         return innerRadius;
     }
 
-    public void setInnerRadius(int innerRadius) {
-        this.innerRadius = innerRadius;
+    public void setInnerRadius(int innerRadius) throws Exception {
+
+        if (this.innerRadius < super.getRadious()) {
+            this.innerRadius = innerRadius;
+        } else {
+            throw new Exception(":Poluprecnik unutrasnjeg kruga mora biti manji od spoljasnjeg");
+        }
+
     }
 
     public double area() {

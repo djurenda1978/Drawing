@@ -1,14 +1,16 @@
 package drawing.test;
 
-import drawing.model.*;
+import drawing.exceptions.CircleException;
+import drawing.model.Donut;
+import drawing.model.Line;
+import drawing.model.Point;
+import drawing.model.Rectangle;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Scanner;
 
 public class TestGeometry {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 //
 //        vezba 4
 //        Point point1 = new Point();
@@ -62,21 +64,21 @@ public class TestGeometry {
 
 //        vezba: 7
 //
-        Point startPoint = new Point(3, 4, true);
-        Point nextPoint = new Point(3, 6, false);
-        Point nextPoint2 = new Point(6, 8, false);
-        Point endPoint = new Point(3, 8, false);
+		Point startPoint = new Point(3, 4, true);
+		Point nextPoint = new Point(3, 6, false);
+		Point nextPoint2 = new Point(6, 8, false);
+		Point endPoint = new Point(3, 8, false);
 //        Point middlePoint = new Point(2,7,false);
 //        Point center = new Point(4,9,false);
 //
-        Line line1 = new Line(startPoint, nextPoint, true);
-        Line line2 = new Line(nextPoint, nextPoint2, false);
-        Line line3 = new Line(nextPoint2, endPoint, false);
+		Line line1 = new Line(startPoint, nextPoint, true);
+		Line line2 = new Line(nextPoint, nextPoint2, false);
+		Line line3 = new Line(nextPoint2, endPoint, false);
 //        Line line3 = new Line(startPoint,middlePoint,false);
 //
-        Rectangle rectangle1 = new Rectangle(startPoint, 3, 5);
-        Rectangle rectangle2 = new Rectangle(startPoint, 3, 5);
-        Rectangle rectangle3 = new Rectangle(endPoint, 3, 5);
+		Rectangle rectangle1 = new Rectangle(startPoint, 3, 5);
+		Rectangle rectangle2 = new Rectangle(startPoint, 3, 5);
+		Rectangle rectangle3 = new Rectangle(endPoint, 3, 5);
 //
 //        Donut donut1 = new Donut(center,5, true,3 );
 //        Donut donut2 = new Donut(center,5, false,3 );
@@ -131,32 +133,67 @@ public class TestGeometry {
 //
 //      }
 
-        //    vezba 9
+		//    vezba 9
 
-        ArrayList<Shape> shapes = new ArrayList<>();
+//        ArrayList<Shape> shapes = new ArrayList<>();
+//
+//        shapes.add(new Point(100,200));
+//        shapes.add(new Line(new Point(100,200), new Point(200,400)));
+//        shapes.add(new Circle(new Point(100,200),100));
+//        shapes.add(new Rectangle(new Point(100,200),100,200));
+//
+//        for (Shape shape : shapes) {
+//
+//           if(shape.contains(100,200)) {
+//               System.out.println("Shape sadrzi zadatu tacku");
+//           } else {
+//               System.out.println("Shape ne sadrzi zadatu tacku");
+//           }
+//        }
+//
+//        ArrayList<Movable> movables = new ArrayList<>();
+//        movables.addAll((Collection<? extends Movable>) shapes);
+//
+//        for (Movable movable : movables) {
+//            movable.moveBy(20,30);
+//        }
 
-        shapes.add(new Point(100,200));
-        shapes.add(new Line(new Point(100,200), new Point(200,400)));
-        shapes.add(new Circle(new Point(100,200),100));
-        shapes.add(new Rectangle(new Point(100,200),100,200));
+//     vezba 10
 
-        for (Shape shape : shapes) {
+		Donut donut = new Donut(new Point(100, 100), 200, 100);
+		System.out.println(donut.getInnerRadius());
 
-           if(shape.contains(100,200)) {
-               System.out.println("Shape sadrzi zadatu tacku");
-           } else {
-               System.out.println("Shape ne sadrzi zadatu tacku");
-           }
-        }
+		try {
+			System.out.println("Upisite vrednost za precnik unutrasnji i spoljasnjeg krug:");
+			Scanner scanner = new Scanner(System.in);
+			String pointInput = scanner.nextLine();
+			String[] radiuses = pointInput.split(" ");
+			int innerRadious = Integer.parseInt(radiuses[0]);
+			int radious = Integer.parseInt(radiuses[1]);
+//            System.out.println(innerRadious);
+//            System.out.println(radious);
 
-        ArrayList<Movable> movables = new ArrayList<>();
-        movables.addAll((Collection<? extends Movable>) shapes);
 
-        for (Movable movable : movables) {
-            movable.moveBy(20,30);
-        }
-    }
+			donut.setInnerRadius(innerRadious);
+			donut.setRadious(radious);
+
+			System.out.println(innerRadious);
+			System.out.println(radious);
+
+
+		} catch (NumberFormatException numbFormExc) {
+			System.out.println("Nije uneta celobrojna vrednost" + numbFormExc.getMessage());
+		} catch (CircleException circleException) {
+			System.out.println("Precnik unutrasnjeg kruga je veci od spoljasnjeg"+ circleException.getMessage());
+		} catch (Exception exc) {
+			System.out.println("Precnik kruga je manji ili jednak nuli" + exc.getMessage());
+		}
+
+
+	}
+
 }
+
 
 
 

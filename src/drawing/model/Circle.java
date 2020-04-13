@@ -1,5 +1,7 @@
 package drawing.model;
 
+import drawing.exceptions.CircleException;
+
 import java.awt.*;
 import java.util.Objects;
 
@@ -36,7 +38,10 @@ public class Circle extends Shape implements Movable{
         return radious;
     }
 
-    public void setRadious(int radious) {
+    public void setRadious(int radious) throws CircleException {
+        if (this.radious <=0) {
+            throw new CircleException("Poluprecnik kruga je manji ili jednak nuli", new Circle(center,radious));
+        }
         this.radious = radious;
     }
 
@@ -86,7 +91,9 @@ public class Circle extends Shape implements Movable{
 
     @Override
     public void moveBy(int byX, int byY) {
-        this.center.setX(this.center.getX() + byX);
-        this.center.setY(this.center.getY() + byY);
+
+        this.center.moveBy(byX,byY);
+//        this.center.setX(this.center.getX() + byX);
+//        this.center.setY(this.center.getY() + byY);
     }
 }

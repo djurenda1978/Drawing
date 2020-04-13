@@ -80,10 +80,13 @@ public class Line extends Shape implements Movable {
 	@Override
 	public void moveBy(int byX, int byY) {
 
-		this.startPoint.setX(this.startPoint.getX() +byX);
-		this.startPoint.setY(this.startPoint.getY() +byY);
-		this.endPoint.setX(this.endPoint.getX() +byX);
-		this.endPoint.setY(this.endPoint.getY() +byY);
+		this.startPoint.moveBy(byX,byY);
+		this.endPoint.moveBy(byX,byY);
+
+//		this.startPoint.setX(this.startPoint.getX() +byX);
+//		this.startPoint.setY(this.startPoint.getY() +byY);
+//		this.endPoint.setX(this.endPoint.getX() +byX);
+//		this.endPoint.setY(this.endPoint.getY() +byY);
 
 	}
 }

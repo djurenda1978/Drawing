@@ -90,19 +90,20 @@ public class Rectangle extends Shape implements Movable{
 
 	@Override
 	public boolean contains(int x, int y) {
-		return contains(new Point(x, y));
+		return contains(new Point(x,y));
 	}
 
 	@Override
 	public void draw(Graphics g) {
 		g.drawRect(upperLeft.getX(), upperLeft.getY(), this.width, this.height);
-
 	}
 
 	@Override
 	public void moveBy(int byX, int byY) {
-		this.upperLeft.setX(upperLeft.getX()+ byX);
-		this.upperLeft.setY(upperLeft.getY()+ byY);
+
+		this.upperLeft.moveBy(byX,byY);
+//		this.upperLeft.setX(upperLeft.getX()+ byX);
+//		this.upperLeft.setY(upperLeft.getY()+ byY);
 	}
 }
 
