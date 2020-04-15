@@ -64,21 +64,21 @@ public class TestGeometry {
 
 //        vezba: 7
 //
-		Point startPoint = new Point(3, 4, true);
-		Point nextPoint = new Point(3, 6, false);
-		Point nextPoint2 = new Point(6, 8, false);
-		Point endPoint = new Point(3, 8, false);
-//        Point middlePoint = new Point(2,7,false);
-//        Point center = new Point(4,9,false);
-//
-		Line line1 = new Line(startPoint, nextPoint, true);
-		Line line2 = new Line(nextPoint, nextPoint2, false);
-		Line line3 = new Line(nextPoint2, endPoint, false);
-//        Line line3 = new Line(startPoint,middlePoint,false);
-//
-		Rectangle rectangle1 = new Rectangle(startPoint, 3, 5);
-		Rectangle rectangle2 = new Rectangle(startPoint, 3, 5);
-		Rectangle rectangle3 = new Rectangle(endPoint, 3, 5);
+//		Point startPoint = new Point(3, 4, true);
+//		Point nextPoint = new Point(3, 6, false);
+//		Point nextPoint2 = new Point(6, 8, false);
+//		Point endPoint = new Point(3, 8, false);
+////        Point middlePoint = new Point(2,7,false);
+////        Point center = new Point(4,9,false);
+////
+//		Line line1 = new Line(startPoint, nextPoint, true);
+//		Line line2 = new Line(nextPoint, nextPoint2, false);
+//		Line line3 = new Line(nextPoint2, endPoint, false);
+////        Line line3 = new Line(startPoint,middlePoint,false);
+////
+//		Rectangle rectangle1 = new Rectangle(startPoint, 3, 5);
+//		Rectangle rectangle2 = new Rectangle(startPoint, 3, 5);
+//		Rectangle rectangle3 = new Rectangle(endPoint, 3, 5);
 //
 //        Donut donut1 = new Donut(center,5, true,3 );
 //        Donut donut2 = new Donut(center,5, false,3 );
@@ -161,39 +161,56 @@ public class TestGeometry {
 //     vezba 10
 
 		Donut donut = new Donut(new Point(100, 100), 200, 100);
-		System.out.println(donut.getInnerRadius());
+//		System.out.println(donut.getInnerRadius());
 
-		try {
-			System.out.println("Upisite vrednost za precnik unutrasnji i spoljasnjeg krug:");
-			Scanner scanner = new Scanner(System.in);
-			String pointInput = scanner.nextLine();
-			String[] radiuses = pointInput.split(" ");
-			int innerRadious = Integer.parseInt(radiuses[0]);
-			int radious = Integer.parseInt(radiuses[1]);
+//		try {
+//			System.out.println("Upisite vrednost za precnik spoljasnjeg i unutrasnjeg krug:");
+//			Scanner scanner = new Scanner(System.in);
+//			String pointInput = scanner.nextLine();
+//			String[] radiuses = pointInput.split(" ");
+//
+//
+//			int radious = Integer.parseInt(radiuses[0]);
+//			int innerRadious = Integer.parseInt(radiuses[1]);
+//
 //            System.out.println(innerRadious);
 //            System.out.println(radious);
+//
+//			donut.setInnerRadius(innerRadious);
+//			donut.setRadious(radious);
+//
+//		} catch (NumberFormatException numbFormExc) {
+//			System.out.println("Nije uneta celobrojna vrednost" + numbFormExc.getMessage());
+//		} catch (CircleException circleException) {
+//			System.out.println(circleException.getMessage());
+//		} catch (Exception exc) {
+//			System.out.println(exc.getMessage());
+//
+//		}
 
+		try {
+			System.out.println("Upisite vrednost unutrasnjeg krug:");
+			Scanner scanner = new Scanner(System.in);
+			String radiusInput = scanner.nextLine();
+			int innerRadius = Integer.parseInt(radiusInput);
+			donut.setInnerRadius(innerRadius);
 
-			donut.setInnerRadius(innerRadious);
-			donut.setRadious(radious);
+			System.out.println("Upisite vrednost spoljasnjeg  poluprecnik:");
+			scanner = new Scanner(System.in);
+			String outerRadius = scanner.nextLine();
+			int radius = Integer.parseInt(outerRadius);
+			donut.setRadius(radius);
 
-			System.out.println(innerRadious);
-			System.out.println(radious);
-
-
-		} catch (NumberFormatException numbFormExc) {
-			System.out.println("Nije uneta celobrojna vrednost" + numbFormExc.getMessage());
-		} catch (CircleException circleException) {
-			System.out.println("Precnik unutrasnjeg kruga je veci od spoljasnjeg"+ circleException.getMessage());
+		} catch (NumberFormatException nfe) {
+			System.out.println("Unesli ste invalidnu vrenost za poluprecnik" + nfe.getMessage());
+		} catch (CircleException cex) {
+			System.out.println(cex.getMessage());
 		} catch (Exception exc) {
-			System.out.println("Precnik kruga je manji ili jednak nuli" + exc.getMessage());
+			System.out.println(exc.getMessage());
 		}
 
-
 	}
-
 }
-
 
 
 

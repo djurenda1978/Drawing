@@ -1,18 +1,20 @@
 package drawing.model;
 
+import drawing.exceptions.CircleException;
+
 import java.awt.*;
 
 public class Donut extends Circle implements Movable {
 
     private int innerRadius;
 
-    public Donut (Point center, int radious, int innerRadius) {
-        super(center, radious);
+    public Donut (Point center, int radius, int innerRadius) {
+        super(center, radius);
         this.innerRadius = innerRadius;
     }
 
-    public Donut(Point center, int radios, boolean select, int innerRadius) {
-        super(center, radios, select);
+    public Donut(Point center, int radius, boolean select, int innerRadius) {
+        super(center, radius, select);
         this.innerRadius = innerRadius;
     }
 
@@ -22,13 +24,13 @@ public class Donut extends Circle implements Movable {
 
     public void setInnerRadius(int innerRadius) throws Exception {
 
-        if (this.innerRadius < super.getRadious()) {
-            this.innerRadius = innerRadius;
-        } else {
-            throw new Exception(":Poluprecnik unutrasnjeg kruga mora biti manji od spoljasnjeg");
+        if (innerRadius > this.radius) {
+            throw new Exception("Unutrasnji radijus je veci od spoljasnjeg.");
         }
-
+        this.innerRadius = innerRadius;
     }
+
+
 
     public double area() {
         return super.area() - innerRadius*innerRadius*Math.PI;

@@ -3,52 +3,50 @@ package drawing.model;
 import drawing.exceptions.CircleException;
 
 import java.awt.*;
-import java.util.Objects;
 
-public class Circle extends Shape implements Movable{
+public class Circle extends Shape implements Movable {
 
-    private Point center;
-    private int radious;
+	protected Point center;
+	protected int radius;
 //    private boolean select;
 
-    public Circle (Point center, int radious) {
-        this.center = center;
-        this.radious = radious;
-    }
+	public Circle(Point center, int radius) {
+		this.center = center;
+		this.radius = radius;
+	}
 
-    public Circle (Point center, int radious,boolean selected) {
-        super(selected);
-        this.center = center;
-        this.radious = radious;
-    }
+	public Circle(Point center, int radius, boolean selected) {
+		super(selected);
+		this.center = center;
+		this.radius = radius;
+	}
 //    public Circle (Point center, int radious, boolean selectCircle) {
 //        this(center, radious);
 //        this.select = selectCircle;
 //    }
 
-    public Point getCenter() {
-        return center;
-    }
+	public Point getCenter() {
+		return center;
+	}
 
-    public void setCenter(Point center) {
-        this.center = center;
-    }
+	public void setCenter(Point center) {
+		this.center = center;
+	}
 
-    public int getRadious() {
-        return radious;
-    }
+	public int getRadius() {
+		return radius;
+	}
 
-    public void setRadious(int radious) throws CircleException {
-        if (this.radious <=0) {
-            throw new CircleException("Poluprecnik kruga je manji ili jednak nuli", new Circle(center,radious));
-        }
-        this.radious = radious;
-    }
+	public void setRadius(int radius) throws CircleException {
+		if (radius <= 0) {
+			throw new CircleException("Poluprecnik kruga je manji ili jednak nuli", this);
+		}
+		this.radius = radius;
+	}
 
-    public double area() {
-        return this.radious*this.radious*Math.PI;
-    }
-
+	public double area() {
+		return this.radius * this.radius * Math.PI;
+	}
 
 
 //    public boolean contains(int x, int y) {
@@ -57,43 +55,43 @@ public class Circle extends Shape implements Movable{
 //    }
 
 
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Circle) {
+			Circle cTemp = (Circle) obj;
+			if (this.center.equals(cTemp.center) && this.radius == cTemp.radius) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return false;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if( obj instanceof Circle) {
-            Circle cTemp = (Circle)obj;
-            if (this.center.equals(cTemp.center) && this.radious == cTemp.radious) {
-                return true;
-        } else {
-                return false;
-            }
-    }
-        return false;
-    }
+	@Override
+	public String toString() {
+		return "Center:" + this.center + ", Radious:" + this.radius;
+	}
 
-    @Override
-    public String toString () {
-        return "Center:" + this.center + ", Radious:" + this.radious ;
-    }
+	private boolean contains(Point p) {
+		return (this.center.distance(p)) <= this.radius;
+	}
 
-    private boolean contains(Point p) {
-        return (this.center.distance(p)) <= this.radious;
-    }
-    @Override
-    public boolean contains(int x, int y) {
-        return contains(new Point(x, y));
-    }
+	@Override
+	public boolean contains(int x, int y) {
+		return contains(new Point(x, y));
+	}
 
-    @Override
-    public void draw(Graphics g) {
-        g.drawOval(this.center.getX(), this.center.getY(),this.radious*2, this.radious*2);
-    }
+	@Override
+	public void draw(Graphics g) {
+		g.drawOval(this.center.getX(), this.center.getY(), this.radius * 2, this.radius * 2);
+	}
 
-    @Override
-    public void moveBy(int byX, int byY) {
+	@Override
+	public void moveBy(int byX, int byY) {
 
-        this.center.moveBy(byX,byY);
+		this.center.moveBy(byX, byY);
 //        this.center.setX(this.center.getX() + byX);
 //        this.center.setY(this.center.getY() + byY);
-    }
+	}
 }
