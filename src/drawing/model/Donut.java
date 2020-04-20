@@ -4,7 +4,7 @@ import drawing.exceptions.CircleException;
 
 import java.awt.*;
 
-public class Donut extends Circle implements Movable {
+public class Donut extends Circle implements Comparable {
 
     private int innerRadius;
 
@@ -65,6 +65,10 @@ public boolean equals (Object obj) {
     @Override
     public String toString() {
         return super.toString() + ", Inner radious:" + this.innerRadius;
+    }
+    @Override
+    public int compareTo(Object o) {
+        return (int)(this.area() - ((Donut)o).area());
     }
     private boolean containsInner (Point p){
         return (super.getCenter().distance(p)) < this.innerRadius;

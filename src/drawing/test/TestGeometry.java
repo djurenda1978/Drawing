@@ -186,7 +186,7 @@ public class TestGeometry {
 //		} catch (Exception exc) {
 //			System.out.println(exc.getMessage());
 //
-//		}
+//		}7
 
 		try {
 			System.out.println("Upisite vrednost unutrasnjeg krug:");
